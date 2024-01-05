@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Arduino Web Page</title>
+</head>
+<body>
+  <h1>Hello from Arduino!</h1>
+  <p>LED is currently <span id="led-status">Off</span></p>
+  <button onclick="turnOnLED()">Turn On</button>
+  <button onclick="turnOffLED()">Turn Off</button>
+
+  <script>
+    // JavaScript functions to control the LED
+    function turnOnLED() {
+      // Send a request to the Arduino to turn on the LED
+      fetch('/LED=ON')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('led-status').innerText = data;
+        });
+    }
+
+    function turnOffLED() {
+      // Send a request to the Arduino to turn off the LED
+      fetch('/LED=OFF')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('led-status').innerText = data;
+        });
+    }
+  </script>
+</body>
+</html>

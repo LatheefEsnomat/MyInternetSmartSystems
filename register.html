@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISS | Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+    <div class="background-of-page">
+        <video src="videoplayback.webm" autoplay loop muted></video>
+        <div class="login-box-container">
+            <div class="login-box-content">
+                <div class="login-content">
+                    <form action="signup.php" method="post">
+                        <input type="text" placeholder="Name" class="details-name" name="username">
+                        <input type="email" placeholder="email" class="details-email" name="Email"><br>
+                        <select name="utility" id="utility" class="utility" name="Utility">
+                            <option value="null">Select-Utility</option>
+                            <option value="Home">Home</option>
+                            <option value="Office">Office</option>
+                            <option value="college">College</option>
+                        </select>
+                        <input type="password" placeholder="Password" class="details-pass" name="password">
+                        <input type="submit" value="Signup">
+                        <button class="login-button">Register</button>
+                    </form>
+                    <div class="or-line-first"></div>
+                    <div class="or">or</div>
+                    <div class="or-line-second"></div>
+                    <a href="login.html" class="register-now">Log In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
